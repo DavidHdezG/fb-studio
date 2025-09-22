@@ -15,7 +15,7 @@ export default function SignupFormDemo() {
   return (
     <WobbleCard containerClassName="max-w-2xl mx-auto">
     <div className="shadow-input mx-auto w-full max-w-2xl rounded-none bg-transparent p-4 md:rounded-2xl md:p-8">
-      <form className="my-8" onSubmit={handleSubmit}>
+      <form className="my-2" onSubmit={handleSubmit}>
         <div className="mb-4 flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
           <LabelInputContainer className="w-full">
             <Label htmlFor="firstname">First name</Label>
@@ -30,7 +30,7 @@ export default function SignupFormDemo() {
           <Label htmlFor="email">Email Address</Label>
           <Input id="email" placeholder="jane.doe@example.com" type="email" />
         </LabelInputContainer>
-        <LabelInputContainer className="mb-8">
+        <LabelInputContainer className="mb-4">
           <Label htmlFor="message">Message</Label>
           <Textarea id="message" placeholder="Your message here..." />
         </LabelInputContainer>
