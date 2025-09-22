@@ -13,7 +13,7 @@ export default function SignupFormDemo() {
     console.log("Form submitted");
   };
   return (
-    <WobbleCard containerClassName="bg-card max-w-2xl mx-auto">
+    <WobbleCard containerClassName="max-w-2xl mx-auto">
     <div className="shadow-input mx-auto w-full max-w-2xl rounded-none bg-transparent p-4 md:rounded-2xl md:p-8">
       <form className="my-8" onSubmit={handleSubmit}>
         <div className="mb-4 flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
