@@ -6,6 +6,7 @@ import SignupFormDemo from "@/components/signup-form-demo";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import TypewriterEffect from "@/components/typewriter-effect";
+import AnimatedTestimonialsDemo from "@/components/animated-testimonials-demo";
 
 export default function Home() {
   return (
@@ -60,6 +61,16 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section id="testimonials" className="py-20">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 font-headline">
+          What Our Clients Say
+        </h2>
+        <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+          Hear from those who have experienced the Bifrost Code difference.
+        </p>
+        <AnimatedTestimonialsDemo />
       </section>
       
       <section id="contact" className="py-20">
