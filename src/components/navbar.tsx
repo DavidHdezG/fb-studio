@@ -14,6 +14,7 @@ const Navbar = () => {
     { href: "#clients", label: "Clients" },
     { href: "#about", label: "About" },
     { href: "#testimonials", label: "Testimonials" },
+    { href: "#services-cards", label: "Our Services" },
   ];
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {

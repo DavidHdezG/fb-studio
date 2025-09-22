@@ -7,12 +7,20 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import TypewriterEffect from "@/components/typewriter-effect";
 import AnimatedTestimonialsDemo from "@/components/animated-testimonials-demo";
+import OurServices from "@/components/our-services";
 
 export default function Home() {
   return (
     <div className="bg-background min-h-screen w-full">
       <Navbar />
       <HeroParallaxDemo />
+
+      <section id="services-cards" className="py-20 bg-background">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 font-headline">
+          Our Services
+        </h2>
+        <OurServices />
+      </section>
 
       <section id="clients" className="py-20">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 font-headline">
