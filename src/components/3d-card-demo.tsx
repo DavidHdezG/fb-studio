@@ -4,6 +4,7 @@ import React from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { Button } from "./ui/button";
 import Image from "next/image";
+import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
 type ThreeDCardDemoProps = {
   title: string;
@@ -50,9 +51,15 @@ export default function ThreeDCardDemo({ title, description, imageUrl, imageHint
           </CardItem>
           <CardItem
             translateZ={20}
-            as={Button}
+            as="div"
           >
-            Get in touch
+            <HoverBorderGradient
+              containerClassName="rounded-full"
+              as="button"
+              className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+            >
+              Get in touch
+            </HoverBorderGradient>
           </CardItem>
         </div>
       </CardBody>

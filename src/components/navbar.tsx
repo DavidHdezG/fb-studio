@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,7 @@ const Navbar = () => {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     const href = e.currentTarget.href;
-    const targetId = href.replace(/.*\#/, "");
+    const targetId = href.replace(/.*\\#/, "");
     const elem = document.getElementById(targetId);
     elem?.scrollIntoView({
       behavior: "smooth",
@@ -48,9 +49,13 @@ const Navbar = () => {
           </nav>
 
           <div className="hidden md:block">
-            <Button asChild>
+            <HoverBorderGradient
+              containerClassName="rounded-full"
+              as="button"
+              className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+            >
               <Link href="#contact" onClick={handleScroll}>Contact Us</Link>
-            </Button>
+            </HoverBorderGradient>
           </div>
 
           <div className="md:hidden">
@@ -74,9 +79,13 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            <Button asChild>
+             <HoverBorderGradient
+              containerClassName="rounded-full"
+              as="button"
+              className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+            >
               <Link href="#contact" onClick={handleScroll}>Contact Us</Link>
-            </Button>
+            </HoverBorderGradient>
           </nav>
         </div>
       )}

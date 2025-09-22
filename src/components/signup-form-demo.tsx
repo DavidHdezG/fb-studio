@@ -4,6 +4,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { Textarea } from "./ui/textarea";
+import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
 export default function SignupFormDemo() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -32,27 +33,19 @@ export default function SignupFormDemo() {
           <Textarea id="message" placeholder="Your message here..." />
         </LabelInputContainer>
 
-        <button
-          className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-primary to-blue-700 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-primary dark:from-primary dark:to-blue-700 dark:shadow-[0px_1px_0px_0px_var(--primary-foreground)_inset,0px_-1px_0px_0px_var(--primary-foreground)_inset]"
+        <HoverBorderGradient
+          containerClassName="rounded-full"
+          as="button"
+          className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 w-full justify-center"
           type="submit"
         >
           Send Message &rarr;
-          <BottomGradient />
-        </button>
+        </HoverBorderGradient>
 
       </form>
     </div>
   );
 }
-
-const BottomGradient = () => {
-  return (
-    <>
-      <span className="absolute inset-x-0 -bottom-px block h-px w-full bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-0 transition duration-500 group-hover/btn:opacity-100" />
-      <span className="absolute inset-x-10 -bottom-px mx-auto block h-px w-1/2 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-0 blur-sm transition duration-500 group-hover/btn:opacity-100" />
-    </>
-  );
-};
 
 const LabelInputContainer = ({
   children,
