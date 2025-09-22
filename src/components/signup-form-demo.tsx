@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { Textarea } from "./ui/textarea";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
+import { WobbleCard } from "./ui/wobble-card";
 
 export default function SignupFormDemo() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -12,7 +13,8 @@ export default function SignupFormDemo() {
     console.log("Form submitted");
   };
   return (
-    <div className="shadow-input mx-auto w-full max-w-2xl rounded-none bg-card p-4 md:rounded-2xl md:p-8">
+    <WobbleCard containerClassName="bg-card max-w-2xl mx-auto">
+    <div className="shadow-input mx-auto w-full max-w-2xl rounded-none bg-transparent p-4 md:rounded-2xl md:p-8">
       <form className="my-8" onSubmit={handleSubmit}>
         <div className="mb-4 flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
           <LabelInputContainer className="w-full">
@@ -44,6 +46,7 @@ export default function SignupFormDemo() {
 
       </form>
     </div>
+    </WobbleCard>
   );
 }
 
