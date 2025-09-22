@@ -12,6 +12,7 @@ import Link from "next/link";
 import { Button } from "./button";
 import TypewriterEffect from "../typewriter-effect";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
+import { TextHoverEffect } from "./ui/text-hover-effect";
 
 export const HeroParallax = ({
   products,
@@ -117,10 +118,10 @@ export const Header = () => {
   };
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
-      <h1 className="text-5xl md:text-7xl font-bold dark:text-white font-headline">
-        Bifrost Code
-      </h1>
-        <TypewriterEffect text="The bridge connecting businesses with technology." className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200" />
+      <div className="h-20">
+        <TextHoverEffect text="Bifrost Code" />
+      </div>
+      <TypewriterEffect text="The bridge connecting businesses with technology." className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200" />
       
     </div>
   );
