@@ -122,15 +122,6 @@ export const Header = () => {
       </h1>
         <TypewriterEffect text="The bridge connecting businesses with technology." className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200" />
       
-        <Link href="#contact" onClick={handleScroll} className="mt-8 inline-block">
-          <HoverBorderGradient
-            containerClassName="rounded-full"
-            as="button"
-            className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
-          >
-            Get a Free Consultation
-          </HoverBorderGradient>
-        </Link>
     </div>
   );
 };
