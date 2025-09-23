@@ -17,20 +17,6 @@ export default function Home() {
         <HeroParallaxDemo />
       </section>
 
-      <section id="services" className="py-20 bg-background">
-        <h2 id="services-header" className="text-4xl md:text-5xl font-bold text-center mb-12 font-headline">
-          Nuestros Servicios
-        </h2>
-        <OurServices />
-      </section>
-
-      <section id="clients" className="py-20">
-        <h2 id="clients-header" className="text-4xl md:text-5xl font-bold text-center mb-12 font-headline">
-          Confianza de los Mejores
-        </h2>
-        <CarouselDemo />
-      </section>
-
       <section id="about" className="py-20 bg-secondary/20">
         <div className="container mx-auto px-4">
           <h2 id="about-header" className="text-4xl md:text-5xl font-bold text-center mb-12 font-headline">
@@ -73,13 +59,20 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="services" className="py-20 bg-background">
+        <h2 id="services-header" className="text-4xl md:text-5xl font-bold text-center mb-12 font-headline">
+          Nuestros Servicios
+        </h2>
+        <OurServices />
+      </section>
+
       <section id="testimonials" className="py-20">
         <h2 id="testimonials-header" className="text-4xl md:text-5xl font-bold text-center mb-4 font-headline">
-          Lo que Dicen Nuestros Clientes
+          Nuestros Clientes
         </h2>
-        <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+        {/* <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
           Escucha a quienes han experimentado la diferencia de Bifrost Code.
-        </p>
+        </p> */}
         <AnimatedTestimonialsDemo />
       </section>
       

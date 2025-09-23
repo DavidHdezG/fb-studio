@@ -4,39 +4,25 @@ export default function AnimatedTestimonialsDemo() {
   const testimonials = [
     {
       quote:
-        "La atención al detalle y las características innovadoras han transformado completamente nuestro flujo de trabajo. Esto es exactamente lo que habíamos estado buscando.",
-      name: "Sarah Chen",
-      designation: "Gerente de Producto en TechFlow",
-      src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "Desarrollo de sitio web corporativo para empresa manufacturera especializada en contenedores para transformadores eléctricos. Incluye catálogo de productos, información técnica y sistema de cotizaciones automático.",
+      name: "Grupo Arga",
+      designation: "Empresa Manufacturera - Contenedores para Transformadores",
+      src: "https://media.licdn.com/dms/image/v2/D560BAQGCtM55VE47Qw/company-logo_400_400/company-logo_400_400/0/1705693868614/grupo_arga_logo?e=2147483647&v=beta&t=ZHrlBNtTMtTpLEOiijYm4acquF9-qfcbr2IveSAj6hs",
     },
     {
       quote:
-        "La implementación fue perfecta y los resultados superaron nuestras expectativas. La flexibilidad de la plataforma es notable.",
-      name: "Michael Rodriguez",
-      designation: "CTO en InnovateSphere",
-      src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "Creación de plataforma web personal para instructora de yoga independiente. Sitio incluye horarios de clases, información sobre diferentes tipos de yoga, sistema de reservas online y blog con contenido wellness.",
+      name: "Paoyoga",
+      designation: "Instructora Personal de Yoga",
+      src: "https://paoyoga.fit/_next/image?url=%2Fassets%2Frespira_y_conecta.JPG&w=1920&q=75",
     },
     {
       quote:
-        "Esta solución ha mejorado significativamente la productividad de nuestro equipo. La interfaz intuitiva hace que las tareas complejas sean simples.",
-      name: "Emily Watson",
-      designation: "Directora de Operaciones en CloudScale",
-      src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "Diseño y desarrollo de sitio web institucional para la asociación oficial de karate japonés. Plataforma incluye información sobre dojos afiliados, calendario de eventos, sistema de graduaciones y recursos educativos sobre karate tradicional.",
+      name: "JKA Mexico",
+      designation: "Japan Karate Association - México",
+      src: "https://scontent.fcuu2-1.fna.fbcdn.net/v/t39.30808-6/297834521_607948257598769_8605366451287967204_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=h0i7IweEIy4Q7kNvwEJb5B3&_nc_oc=Adkafjhb22RkGsBVx0zrj6zR9SV1Cv0LEdqP1aPvkDqrhcwbSAhpZxwAM611b9oUJt_kLgCd5XubLKi7FsNcQEb5&_nc_zt=23&_nc_ht=scontent.fcuu2-1.fna&_nc_gid=6A6Zewsxhu7PU7LLo8NZvQ&oh=00_AfbX8__C0e3O_rLF7LjYHLW4jzN53vmn7KksGpPP4_416g&oe=68D8B749",
     },
-    {
-      quote:
-        "Soporte excepcional y características robustas. Es raro encontrar un producto que cumpla todas sus promesas.",
-      name: "James Kim",
-      designation: "Líder de Ingeniería en DataPro",
-      src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      quote:
-        "La escalabilidad y el rendimiento han sido un cambio radical para nuestra organización. Altamente recomendado para cualquier empresa en crecimiento.",
-      name: "Lisa Thompson",
-      designation: "VP de Tecnología en FutureNet",
-      src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-  ];
+];
   return <AnimatedTestimonials testimonials={testimonials} />;
 }
