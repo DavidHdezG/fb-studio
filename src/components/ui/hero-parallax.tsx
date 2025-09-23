@@ -108,20 +108,25 @@ export const Header = () => {
     const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     const href = e.currentTarget.href;
-    const targetId = href.replace(/.*\#/, "");
+    const targetId = href.replace(/.*#/, "");
     const elem = document.getElementById(targetId);
-    elem?.scrollIntoView({
-      behavior: "smooth",
-    });
+    if (elem) {
+      const navbarHeight = 80; // h-20 = 80px
+      const elementPosition = elem.offsetTop - navbarHeight;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth"
+      });
+    }
   };
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
       <h1 className="text-5xl md:text-7xl font-bold dark:text-white font-headline">
         Bifrost Code
       </h1>
-        <TypewriterEffect text="The bridge connecting businesses with technology." className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200" />
+        <TypewriterEffect text="El puente que conecta empresas con tecnología." className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200" />
       <Button asChild size="lg" className="mt-8">
-        <Link href="#contact" onClick={handleScroll}>Get a Free Consultation</Link>
+        <Link href="#contact" onClick={handleScroll}>Obtén una Consulta Gratuita</Link>
       </Button>
     </div>
   );

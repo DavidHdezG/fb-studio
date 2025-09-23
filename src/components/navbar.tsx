@@ -10,21 +10,25 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { href: "#services", label: "Services" },
-    { href: "#clients", label: "Clients" },
-    { href: "#about", label: "About" },
-    { href: "#testimonials", label: "Testimonials" },
-    { href: "#services-cards", label: "Our Services" },
+    { href: "#services", label: "Servicios" },
+    { href: "#clients", label: "Clientes" },
+    { href: "#about", label: "Acerca" },
+    { href: "#testimonials", label: "Testimonios" },
   ];
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     const href = e.currentTarget.href;
-    const targetId = href.replace(/.*\\#/, "");
+    const targetId = href.replace(/.*#/, "");
     const elem = document.getElementById(targetId);
-    elem?.scrollIntoView({
-      behavior: "smooth",
-    });
+    if (elem) {
+      const navbarHeight = 80; // h-20 = 80px
+      const elementPosition = elem.offsetTop - navbarHeight;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth"
+      });
+    }
     setIsOpen(false);
   };
 
@@ -55,7 +59,7 @@ const Navbar = () => {
               as="button"
               className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
             >
-              <Link href="#contact" onClick={handleScroll}>Contact Us</Link>
+              <Link href="#contact" onClick={handleScroll}>Contáctanos</Link>
             </HoverBorderGradient>
           </div>
 
@@ -85,7 +89,7 @@ const Navbar = () => {
               as="button"
               className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
             >
-              <Link href="#contact" onClick={handleScroll}>Contact Us</Link>
+              <Link href="#contact" onClick={handleScroll}>Contáctanos</Link>
             </HoverBorderGradient>
           </nav>
         </div>

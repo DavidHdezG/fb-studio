@@ -13,39 +13,27 @@ export default function Home() {
   return (
     <div className="bg-background min-h-screen w-full">
       <Navbar />
-      <HeroParallaxDemo />
-
-      <section id="services-cards" className="py-20 bg-background">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 font-headline">
-          Our Services
-        </h2>
-        <OurServices />
-      </section>
-
-      <section id="clients" className="py-20">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 font-headline">
-          Trusted by the Best
-        </h2>
-        <CarouselDemo />
+      <section id="home">
+        <HeroParallaxDemo />
       </section>
 
       <section id="about" className="py-20 bg-secondary/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 font-headline">
-            About Bifrost Code
+          <h2 id="about-header" className="text-4xl md:text-5xl font-bold text-center mb-12 font-headline">
+            Acerca de Bifrost Code
           </h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-4">
-              <h3 className="text-3xl font-bold font-headline text-primary">Our Vision</h3>
-              <TypewriterEffect text="To be the seamless nexus between innovative ideas and transformative technology, empowering businesses to thrive in the digital age." />
+              <h3 id="vision-header" className="text-3xl font-bold font-headline text-primary">Nuestra Visión</h3>
+              <TypewriterEffect text="Ser el nexo perfecto entre ideas innovadoras y tecnología transformadora, empoderando a las empresas para prosperar en la era digital." />
               <p className="text-muted-foreground">
-                We envision a world where technology is not a barrier but a catalyst for growth. Our goal is to make sophisticated technology accessible and actionable for businesses of all sizes, helping them to not just compete but to lead in their respective industries.
+                Imaginamos un mundo donde la tecnología no es una barrera sino un catalizador para el crecimiento. Nuestro objetivo es hacer que la tecnología sofisticada sea accesible y práctica para empresas de todos los tamaños, ayudándolas no solo a competir sino a liderar en sus respectivas industrias.
               </p>
             </div>
             <div>
               <ThreeDCardDemo
-                title="Future is Now"
-                description="Unleash the power of tomorrow's technology, today."
+                title="El Futuro es Ahora"
+                description="Libera el poder de la tecnología del mañana, hoy."
                 imageUrl="https://picsum.photos/seed/vision/1000/1000"
                 imageHint="futuristic technology"
               />
@@ -54,40 +42,47 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 items-center mt-20">
             <div className="order-2 md:order-1">
               <ThreeDCardDemo
-                title="Built on Trust"
-                description="Reliable solutions for your most critical needs."
+                title="Construido sobre Confianza"
+                description="Soluciones confiables para tus necesidades más críticas."
                 imageUrl="https://picsum.photos/seed/mission/1000/1000"
                 imageHint="handshake deal"
               />
             </div>
             <div className="space-y-4 order-1 md:order-2">
-              <h3 className="text-3xl font-bold font-headline text-primary">Our Mission</h3>
-               <TypewriterEffect text="To craft elegant, efficient, and effective software solutions that bridge the gap between business challenges and technological possibilities." />
+              <h3 id="mission-header" className="text-3xl font-bold font-headline text-primary">Nuestra Misión</h3>
+               <TypewriterEffect text="Crear soluciones de software elegantes, eficientes y efectivas que conecten los desafíos empresariales con las posibilidades tecnológicas." />
               <p className="text-muted-foreground">
-                Our mission is to understand the unique challenges of our clients and to deliver bespoke technology solutions that drive results. We are committed to excellence, innovation, and partnership, ensuring that every project we undertake is a resounding success.
+                Nuestra misión es entender los desafíos únicos de nuestros clientes y entregar soluciones tecnológicas personalizadas que generen resultados. Estamos comprometidos con la excelencia, innovación y colaboración, asegurando que cada proyecto que emprendemos sea un éxito rotundo.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="testimonials" className="py-20">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 font-headline">
-          What Our Clients Say
+      <section id="services" className="py-20 bg-background">
+        <h2 id="services-header" className="text-4xl md:text-5xl font-bold text-center mb-12 font-headline">
+          Nuestros Servicios
         </h2>
-        <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-          Hear from those who have experienced the Bifrost Code difference.
-        </p>
+        <OurServices />
+      </section>
+
+      <section id="testimonials" className="py-20">
+        <h2 id="testimonials-header" className="text-4xl md:text-5xl font-bold text-center mb-4 font-headline">
+          Nuestros Clientes
+        </h2>
+        {/* <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+          Escucha a quienes han experimentado la diferencia de Bifrost Code.
+        </p> */}
         <AnimatedTestimonialsDemo />
       </section>
       
       <section id="contact" className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 font-headline">
-            Let&apos;s Build Together
+          <h2 id="contact-header" className="text-4xl md:text-5xl font-bold text-center mb-4 font-headline">
+            Construyamos Juntos
           </h2>
           <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-            Have a project in mind? Or just want to say hello? Drop us a line and we&apos;ll get back to you as soon as possible.
+            ¿Tienes un proyecto en mente? ¿O solo quieres saludar? Envíanos un mensaje y te responderemos lo antes posible.
           </p>
           <SignupFormDemo />
         </div>
@@ -95,7 +90,7 @@ export default function Home() {
 
       <footer className="py-8 bg-card border-t">
         <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Bifrost Code. All rights reserved.</p>
+          <p>&copy; 2025 Bifrost Code. Todos los derechos reservados.</p>
         </div>
       </footer>
     </div>

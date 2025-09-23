@@ -40,15 +40,15 @@ export default function ThreeDCardDemo({ title, description, imageUrl, imageHint
             data-ai-hint={imageHint}
           />
         </CardItem>
-        <div className="flex justify-between items-center mt-20">
-          <CardItem
+        <div className="flex justify-end items-center mt-20">
+          {/* <CardItem
             translateZ={20}
             as="a"
             href="#"
             className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
           >
-            Learn more →
-          </CardItem>
+            Aprende más →
+          </CardItem> */}
           <CardItem
             translateZ={20}
             as="div"
@@ -58,7 +58,7 @@ export default function ThreeDCardDemo({ title, description, imageUrl, imageHint
               as="button"
               className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
             >
-              Get in touch
+              Contáctanos
             </HoverBorderGradient>
           </CardItem>
         </div>
