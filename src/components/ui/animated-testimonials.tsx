@@ -1,6 +1,6 @@
 "use client";
 
-import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
+// Removed unused arrow icons since we're using dots instead
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
@@ -14,13 +14,16 @@ type Testimonial = {
 };
 export const AnimatedTestimonials = ({
   testimonials,
-  autoplay = false,
+  autoplay = true,
+  duration = 6000, // Default 6 seconds, configurable
 }: {
   testimonials: Testimonial[];
   autoplay?: boolean;
+  duration?: number; // Duration in milliseconds
 }) => {
   const [active, setActive] = useState(0);
   const [isClient, setIsClient] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     setIsClient(true);
@@ -30,8 +33,13 @@ export const AnimatedTestimonials = ({
     setActive((prev) => (prev + 1) % testimonials.length);
   };
 
-  const handlePrev = () => {
-    setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  // handlePrev removed since we're using dot navigation instead of arrows
+
+  const handleDotClick = (index: number) => {
+    setActive(index);
+    if (autoplay) {
+      setProgress(0); // Reset progress when manually changing
+    }
   };
 
   const isActive = (index: number) => {
@@ -40,10 +48,44 @@ export const AnimatedTestimonials = ({
 
   useEffect(() => {
     if (autoplay) {
-      const interval = setInterval(handleNext, 5000);
-      return () => clearInterval(interval);
+      let progressInterval: NodeJS.Timeout;
+      let changeInterval: NodeJS.Timeout;
+
+      // Calculate progress steps based on duration
+      const progressUpdateInterval = 100; // Update every 100ms
+      const totalSteps = duration / progressUpdateInterval;
+      const progressStep = 100 / totalSteps;
+
+      const startProgress = () => {
+        setProgress(0);
+        progressInterval = setInterval(() => {
+          setProgress(prev => {
+            if (prev >= 100) {
+              return 0;
+            }
+            return prev + progressStep;
+          });
+        }, progressUpdateInterval);
+      };
+
+      const resetProgress = () => {
+        setProgress(0);
+        clearInterval(progressInterval);
+        startProgress();
+      };
+
+      startProgress();
+      changeInterval = setInterval(() => {
+        handleNext();
+        resetProgress();
+      }, duration);
+
+      return () => {
+        clearInterval(progressInterval);
+        clearInterval(changeInterval);
+      };
     }
-  }, [autoplay]);
+  }, [autoplay, duration]);
 
   const getRotateY = (index: number, isActive: boolean) => {
     if (!isClient) return 0; // Avoid hydration mismatch
@@ -54,7 +96,7 @@ export const AnimatedTestimonials = ({
   return (
     <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
       <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
-        <div>
+        <div className="relative">
           <div className="relative h-80 w-full">
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
@@ -99,6 +141,30 @@ export const AnimatedTestimonials = ({
                 </motion.div>
               ))}
             </AnimatePresence>
+          </div>
+          {/* Progress bar positioned below the cards */}
+          {autoplay && (
+            <div className="absolute bottom-[-45px] left-1/2 -translate-x-1/2 w-64 h-1 bg-gray-200 dark:bg-neutral-700 rounded-full overflow-hidden">
+              <div
+                className="h-full bg-primary transition-all duration-100 ease-linear rounded-full"
+                style={{ width: `${progress}%` }}
+              />
+            </div>
+          )}
+
+          {/* Dot indicators positioned below the progress bar */}
+          <div className="absolute bottom-[-65px] left-1/2 -translate-x-1/2 flex gap-3">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => handleDotClick(index)}
+                className={`h-3 w-3 rounded-full transition-all duration-500 hover:scale-125 ${
+                  index === active
+                    ? "bg-primary w-12 scale-110 shadow-lg"
+                    : "bg-gray-300 dark:bg-neutral-600 hover:bg-gray-400 dark:hover:bg-neutral-500"
+                }`}
+              />
+            ))}
           </div>
         </div>
         <div className="flex flex-col justify-between py-4">
@@ -153,20 +219,7 @@ export const AnimatedTestimonials = ({
               ))}
             </motion.p>
           </motion.div>
-          <div className="flex gap-4 pt-12 md:pt-0">
-            <button
-              onClick={handlePrev}
-              className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
-            >
-              <IconArrowLeft className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:rotate-12 dark:text-neutral-400" />
-            </button>
-            <button
-              onClick={handleNext}
-              className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
-            >
-              <IconArrowRight className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:-rotate-12 dark:text-neutral-400" />
-            </button>
-          </div>
+          {/* Navigation dots positioned below image cards */}
         </div>
       </div>
     </div>
