@@ -14,17 +14,21 @@ const Navbar = () => {
     { href: "#clients", label: "Clientes" },
     { href: "#about", label: "Acerca" },
     { href: "#testimonials", label: "Testimonios" },
-    { href: "#services-cards", label: "Nuestros Servicios" },
   ];
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     const href = e.currentTarget.href;
-    const targetId = href.replace(/.*\\#/, "");
+    const targetId = href.replace(/.*#/, "");
     const elem = document.getElementById(targetId);
-    elem?.scrollIntoView({
-      behavior: "smooth",
-    });
+    if (elem) {
+      const navbarHeight = 80; // h-20 = 80px
+      const elementPosition = elem.offsetTop - navbarHeight;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth"
+      });
+    }
     setIsOpen(false);
   };
 

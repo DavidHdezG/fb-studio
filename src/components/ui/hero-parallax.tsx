@@ -108,11 +108,16 @@ export const Header = () => {
     const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     const href = e.currentTarget.href;
-    const targetId = href.replace(/.*\#/, "");
+    const targetId = href.replace(/.*#/, "");
     const elem = document.getElementById(targetId);
-    elem?.scrollIntoView({
-      behavior: "smooth",
-    });
+    if (elem) {
+      const navbarHeight = 80; // h-20 = 80px
+      const elementPosition = elem.offsetTop - navbarHeight;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth"
+      });
+    }
   };
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
