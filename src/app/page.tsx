@@ -97,7 +97,7 @@ export default function Home() {
 
       <footer className="py-8 bg-card border-t">
         <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p>&copy; 2024 Bifrost Code. Todos los derechos reservados.</p>
+          <p>&copy; 2025 Bifrost Code. Todos los derechos reservados.</p>
         </div>
       </footer>
     </div>
