@@ -7,37 +7,37 @@ export default function HeroParallaxDemo() {
 }
 export const products = [
   {
-    title: "Web Development",
+    title: "Desarrollo Web",
     link: "#",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
   },
   {
-    title: "App Development",
+    title: "Desarrollo de Aplicaciones",
     link: "#",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/cursor.png",
   },
   {
-    title: "UI/UX Design",
+    title: "Diseño UI/UX",
     link: "#",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/rogue.png",
   },
   {
-    title: "Cloud Solutions",
+    title: "Soluciones en la Nube",
     link: "#",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/editorially.png",
   },
   {
-    title: "AI Integration",
+    title: "Integración de IA",
     link: "#",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/editrix.png",
   },
   {
-    title: "Pixel Perfect",
+    title: "Píxel Perfecto",
     link: "#",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
@@ -50,13 +50,13 @@ export const products = [
       "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
   },
   {
-    title: "E-commerce",
+    title: "Comercio Electrónico",
     link: "#",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
   },
   {
-    title: "SaaS Products",
+    title: "Productos SaaS",
     link: "#",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
@@ -75,7 +75,7 @@ export const products = [
   },
 
   {
-    title: "Digital Transformation",
+    title: "Transformación Digital",
     link: "#",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",

@@ -119,9 +119,9 @@ export const Header = () => {
       <h1 className="text-5xl md:text-7xl font-bold dark:text-white font-headline">
         Bifrost Code
       </h1>
-        <TypewriterEffect text="The bridge connecting businesses with technology." className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200" />
+        <TypewriterEffect text="El puente que conecta empresas con tecnología." className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200" />
       <Button asChild size="lg" className="mt-8">
-        <Link href="#contact" onClick={handleScroll}>Get a Free Consultation</Link>
+        <Link href="#contact" onClick={handleScroll}>Obtén una Consulta Gratuita</Link>
       </Button>
     </div>
   );

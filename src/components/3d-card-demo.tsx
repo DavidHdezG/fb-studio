@@ -47,7 +47,7 @@ export default function ThreeDCardDemo({ title, description, imageUrl, imageHint
             href="#"
             className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
           >
-            Learn more →
+            Aprende más →
           </CardItem>
           <CardItem
             translateZ={20}
@@ -58,7 +58,7 @@ export default function ThreeDCardDemo({ title, description, imageUrl, imageHint
               as="button"
               className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
             >
-              Get in touch
+              Contáctanos
             </HoverBorderGradient>
           </CardItem>
         </div>

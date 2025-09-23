@@ -4,37 +4,37 @@ export default function AnimatedTestimonialsDemo() {
   const testimonials = [
     {
       quote:
-        "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
+        "La atención al detalle y las características innovadoras han transformado completamente nuestro flujo de trabajo. Esto es exactamente lo que habíamos estado buscando.",
       name: "Sarah Chen",
-      designation: "Product Manager at TechFlow",
+      designation: "Gerente de Producto en TechFlow",
       src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       quote:
-        "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
+        "La implementación fue perfecta y los resultados superaron nuestras expectativas. La flexibilidad de la plataforma es notable.",
       name: "Michael Rodriguez",
-      designation: "CTO at InnovateSphere",
+      designation: "CTO en InnovateSphere",
       src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       quote:
-        "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
+        "Esta solución ha mejorado significativamente la productividad de nuestro equipo. La interfaz intuitiva hace que las tareas complejas sean simples.",
       name: "Emily Watson",
-      designation: "Operations Director at CloudScale",
+      designation: "Directora de Operaciones en CloudScale",
       src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       quote:
-        "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
+        "Soporte excepcional y características robustas. Es raro encontrar un producto que cumpla todas sus promesas.",
       name: "James Kim",
-      designation: "Engineering Lead at DataPro",
+      designation: "Líder de Ingeniería en DataPro",
       src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       quote:
-        "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
+        "La escalabilidad y el rendimiento han sido un cambio radical para nuestra organización. Altamente recomendado para cualquier empresa en crecimiento.",
       name: "Lisa Thompson",
-      designation: "VP of Technology at FutureNet",
+      designation: "VP de Tecnología en FutureNet",
       src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
