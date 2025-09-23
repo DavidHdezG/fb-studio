@@ -82,7 +82,7 @@ export default function Home() {
             Construyamos Juntos
           </h2>
           <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-            ¿Tienes un proyecto en mente? ¿O solo quieres saludar? Envíanos un mensaje y te responderemos lo antes posible.
+            ¿Tienes un proyecto en mente? Envíanos un mensaje y te responderemos lo antes posible.
           </p>
           <SignupFormDemo />
         </div>
