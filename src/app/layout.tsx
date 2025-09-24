@@ -3,8 +3,48 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Bifrost Bridge',
-  description: 'The bridge connecting businesses with technology.',
+  title: 'Bifrost Code - Conectamos empresas con la tecnología',
+  description: 'Soluciones tecnológicas innovadoras para empresas. Desarrollo de software, aplicaciones web y móviles que impulsan tu negocio.',
+  keywords: 'desarrollo software, aplicaciones web, tecnología empresarial, soluciones digitales, desarrollo móvil',
+  authors: [{ name: 'Bifrost Code' }],
+  creator: 'Bifrost Code',
+  publisher: 'Bifrost Code',
+  category: 'technology',
+  openGraph: {
+    title: 'Bifrost Code - Conectamos empresas con la tecnología',
+    description: 'Soluciones tecnológicas innovadoras para empresas. Desarrollo de software, aplicaciones web y móviles que impulsan tu negocio.',
+    url: process.env.NEXT_PUBLIC_BASE_URL || 'https://www.bifrostcode.com',
+    siteName: 'Bifrost Code',
+    type: 'website',
+    locale: 'es_ES',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Bifrost Code - Soluciones Tecnológicas',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Bifrost Code - Conectamos empresas con la tecnología',
+    description: 'Soluciones tecnológicas innovadoras para empresas. Desarrollo de software, aplicaciones web y móviles.',
+    images: ['/og-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  viewport: 'width=device-width, initial-scale=1',
+  themeColor: '#000000',
 };
 
 export default function RootLayout({
