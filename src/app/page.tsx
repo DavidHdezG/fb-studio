@@ -20,7 +20,7 @@ export default function Home() {
       <section id="about" className="py-20 bg-secondary/20">
         <div className="container mx-auto px-4">
           <h2 id="about-header" className="text-4xl md:text-5xl font-bold text-center mb-12 font-headline">
-            Acerca de Bifrost Code
+            Nosotros
           </h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-4">
