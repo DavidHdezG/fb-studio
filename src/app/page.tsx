@@ -66,7 +66,7 @@ export default function Home() {
         <OurServices />
       </section>
 
-      <section id="testimonials" className="py-20">
+      <section id="services" className="py-20">
         <h2 id="testimonials-header" className="text-4xl md:text-5xl font-bold text-center mb-4 font-headline">
           Nuestros Clientes
         </h2>
