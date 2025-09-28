@@ -14,7 +14,14 @@ export default function AnimatedTestimonialsDemo() {
         "Creación de plataforma web personal para instructora de yoga independiente. Sitio incluye horarios de clases, información sobre diferentes tipos de yoga, sistema de reservas online y blog con contenido wellness.",
       name: "Paoyoga",
       designation: "Instructora Personal de Yoga",
-      src: "https://paoyoga.fit/_next/image?url=%2Fassets%2Frespira_y_conecta.JPG&w=1920&q=75",
+      src: "/paoyoga.jpg",
+    },
+    {
+      quote:
+        "Configuración de sitio existente para la integración de una plataforma de aprendizaje online. Incluye contenido educativo, sistema de cursos y acceso a recursos de aprendizaje en distintos formatos, como videos, pdfs y enlaces externos.",
+      name: "Love & Wellness Counseling",
+      designation: "Asesoramiento en salud mental",
+      src: "/love-wellness.jpg",
     },
     {
       quote:

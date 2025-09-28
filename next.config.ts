@@ -54,7 +54,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'paoyoga.fit',
+        hostname: 'i.imgur.com',
         port: '',
         pathname: '/**',
       },
