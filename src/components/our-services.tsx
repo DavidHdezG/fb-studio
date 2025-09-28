@@ -10,37 +10,37 @@ export default function OurServices() {
   const items = [
     {
       title: "Desarrollo Web",
-      image: "https://fontis.au/assets/hero/software-development.svg",
+      image: "/Web.jpg",
       className: "absolute top-10 left-[20%] rotate-[-5deg]",
       imageHint: "abstract lines",
     },
     {
       title: "Desarrollo de Aplicaciones",
-      image: "https://fontis.au/assets/hero/e-commerce-development.svg",
+      image: "/App.jpg",
       className: "absolute top-40 left-[25%] rotate-[-7deg]",
       imageHint: "mobile screen",
     },
     {
       title: "Soluciones en la Nube",
-      image: "https://fontis.au/assets/hero/worldwide-shopping.svg",
+      image: "/cloud.jpg",
       className: "absolute top-32 left-[55%] rotate-[10deg]",
       imageHint: "cloud computing",
     },
     {
       title: "Integración de IA",
-      image: "https://fontis.au/fontis-commerce-stack/fcs-hero_hu_940406a46ea94256.8db56ad8df46ad3d198d4d0e51077b47cdc77aea5e3e146434ec4e205eb63d95.webp",
+      image: "/AI.jpg",
       className: "absolute top-20 right-[35%] rotate-[2deg]",
       imageHint: "robot brain",
-    },
+    },/* 
     {
       title: "DevOps",
       image: "https://fontis.au/assets/hero/devops-development.svg",
       className: "absolute top-24 left-[45%] rotate-[-7deg]",
       imageHint: "infinity loop",
-    },
+    }, */
     {
       title: "Comercio Electrónico",
-      image: "https://fontis.au/assets/hero/woman-standing-on-front-of-smartphone-with-purchase-statistics-on-screen.svg",
+      image: "/ecommerce.jpg",
       className: "absolute top-8 left-[30%] rotate-[4deg]",
       imageHint: "shopping cart",
     },

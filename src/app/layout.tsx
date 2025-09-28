@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Bifrost Code - Conectamos empresas con la tecnología',
+    title: 'Bifrost Code',
     description: 'Soluciones tecnológicas innovadoras para empresas. Desarrollo de software, aplicaciones web y móviles.',
     images: ['/og-image.jpg'],
   },
