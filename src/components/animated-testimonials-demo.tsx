@@ -28,7 +28,7 @@ export default function AnimatedTestimonialsDemo() {
         "Diseño y desarrollo de sitio web institucional para la asociación oficial de karate japonés. Plataforma incluye información sobre dojos afiliados, calendario de eventos, sistema de graduaciones y recursos educativos sobre karate tradicional.",
       name: "JKA Mexico",
       designation: "Japan Karate Association - México",
-      src: "https://scontent.fcuu2-1.fna.fbcdn.net/v/t39.30808-6/297834521_607948257598769_8605366451287967204_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=h0i7IweEIy4Q7kNvwEJb5B3&_nc_oc=Adkafjhb22RkGsBVx0zrj6zR9SV1Cv0LEdqP1aPvkDqrhcwbSAhpZxwAM611b9oUJt_kLgCd5XubLKi7FsNcQEb5&_nc_zt=23&_nc_ht=scontent.fcuu2-1.fna&_nc_gid=6A6Zewsxhu7PU7LLo8NZvQ&oh=00_AfbX8__C0e3O_rLF7LjYHLW4jzN53vmn7KksGpPP4_416g&oe=68D8B749",
+      src: "/jka.jpg",
     },
 ];
   return <AnimatedTestimonials testimonials={testimonials} />;
